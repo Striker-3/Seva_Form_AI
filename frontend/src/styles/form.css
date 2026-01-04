@@ -1,0 +1,365 @@
+/* =====================================================
+   BASE CONTAINER (SINGLE SOURCE OF TRUTH)
+===================================================== */
+.editable-form-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  min-height: auto;
+}
+
+/* =====================================================
+   SAFE ANIMATIONS (SCREEN ONLY)
+===================================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.editable-form-container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* =====================================================
+   DISABLE ALL ANIMATION FOR PDF CAPTURE
+===================================================== */
+.no-animation *,
+.no-animation *::before,
+.no-animation *::after {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* =====================================================
+   PAGE BREAK HELPERS
+===================================================== */
+.page-break-before {
+  page-break-before: always;
+  break-before: page;
+}
+
+.page-break-after {
+  page-break-after: always;
+  break-after: page;
+}
+
+.page-break-avoid {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* =====================================================
+   FORM BOX
+===================================================== */
+.form-box {
+  background: white;
+  border-radius: 16px;
+  padding: 35px;
+  border: 1px solid #e5e7eb;
+}
+
+/* ❌ REMOVE hover transforms (canvas killer) */
+.form-box:hover {
+  box-shadow: none;
+}
+
+/* =====================================================
+   TITLES
+===================================================== */
+.form-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+/* =====================================================
+   FORM FIELDS
+===================================================== */
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  page-break-inside: avoid;
+}
+
+/* =====================================================
+   LABELS
+===================================================== */
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, #e5e7eb, transparent);
+}
+
+/* =====================================================
+   INPUTS
+===================================================== */
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  background: white;
+  color: #111827;
+  outline: none;
+}
+
+/* ❌ REMOVE hover lift */
+.form-input:hover,
+.form-textarea:hover,
+.form-select:hover {
+  transform: none;
+}
+
+/* FOCUS */
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.15);
+}
+
+/* TEXTAREA */
+.form-textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* SELECT */
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 14px;
+  padding-right: 36px;
+}
+
+/* =====================================================
+   PREVIEW MODE
+===================================================== */
+.preview-mode .form-input,
+.preview-mode .form-textarea,
+.preview-mode .form-select {
+  border: none;
+  border-bottom: 2px dashed #9ca3af;
+  background: transparent;
+  border-radius: 0;
+  padding: 6px 0;
+  pointer-events: none;
+  font-weight: 500;
+}
+
+/* =====================================================
+   SUBMIT SECTION
+===================================================== */
+.form-submit-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #f3f4f6;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+.btn-submit-form,
+.btn-confirm {
+  width: 100%;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+}
+
+.btn-edit {
+  background: #e5e7eb;
+  color: #374151;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* =====================================================
+   GOVERNMENT FOOTER
+===================================================== */
+.govt-footer {
+  display: none;
+  margin-top: 20px;
+  border-top: 2px solid #000;
+  padding-top: 15px;
+}
+
+/* =====================================================
+   SCREEN / PRINT TOGGLE
+===================================================== */
+.screen-only {
+  display: block;
+}
+
+/* =====================================================
+   PRINT MODE (USED BY PDF + BROWSER)
+===================================================== */
+@media print {
+
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  /* Hide non-form UI */
+  button,
+  nav,
+  header,
+  footer,
+  .screen-only {
+    display: none !important;
+  }
+
+  .editable-form-container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .form-box {
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .govt-footer {
+    display: block;
+  }
+
+  .form-field-group {
+    border: 1px solid #ddd;
+    padding: 4px;
+    margin-bottom: 4px;
+  }
+
+  .form-label {
+    font-size: 10px;
+    font-weight: bold;
+    color: #000;
+  }
+
+  .form-input,
+  .form-textarea,
+  .form-select {
+    font-size: 11px;
+    border: none;
+    border-bottom: 1px solid #333;
+    background: white;
+    padding: 2px 0;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* =====================================================
+   PDF CAPTURE MODE — HIGH CONTRAST & VISIBILITY
+===================================================== */
+.pdf-mode {
+  background: white !important;
+  color: black !important;
+}
+
+/* Force every single element to be solid black */
+.pdf-mode *,
+.pdf-mode *::before,
+.pdf-mode *::after {
+  color: #000000 !important;
+  opacity: 1 !important;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+/* Specific overrides for labels and inputs */
+.pdf-mode .form-label {
+  color: #000 !important;
+  font-weight: 800 !important;
+  font-size: 11px !important;
+}
+
+.pdf-mode .form-input,
+.pdf-mode .form-textarea,
+.pdf-mode .form-select {
+  color: #000 !important;
+  border: none !important;
+  border-bottom: 2px solid #000 !important;
+  background: white !important;
+  padding: 4px 0 !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+/* Force govt-header into view */
+.pdf-mode .govt-header {
+  display: block !important;
+  border-bottom: 2px solid #000 !important;
+  padding-bottom: 10px !important;
+  margin-bottom: 20px !important;
+}
+
+.pdf-mode .govt-header h1,
+.pdf-mode .govt-header h3 {
+  color: #000 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+}
+
+/* Ensure footer is visible */
+.pdf-mode .govt-footer {
+  display: block !important;
+  border-top: 2px solid #000 !important;
+  padding-top: 15px !important;
+}
+
+.pdf-mode .form-box {
+  border: none !important;
+  padding: 0 !important;
+  background: white !important;
+}

@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+opencv-python
+pytesseract
+pillow
+openai-whisper
+torch
+numpy
+requests

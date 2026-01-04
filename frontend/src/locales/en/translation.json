@@ -1,0 +1,418 @@
+{
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "about": "About",
+        "blog": "Blog",
+        "contact": "Contact",
+        "chat_ai": "Chat AI",
+        "login": "Login",
+        "register": "Register"
+    },
+    "hero": {
+        "title_brand": "Seva",
+        "title_highlight": "Form AI",
+        "subtitle": "Your Smart AI Assistant for Seva Kendra Services",
+        "description": "Citizens often need to fill in multiple government service forms at Seva Kendras (e.g., for certificates, licenses, and welfare schemes). This AI tool auto-fills these forms based on uploaded documents (Aadhaar, PAN, voter ID, etc.), reducing manual effort and errors.",
+        "get_started": "Get Started Now",
+        "select_option": "Select an option to proceed with your application",
+        "browse_services": "Browse Services & Apply",
+        "voice_filling": "Voice Based Form Filling",
+        "admin_dashboard": "Admin Dashboard",
+        "upload_docs": "Upload Documents",
+        "upload_desc": "Support for Aadhaar, PAN, Voter ID, and more",
+        "ai_autofill": "AI Auto-Fill",
+        "autofill_desc": "Smart extraction engine to fill data automatically",
+        "reduce_errors": "Reduce Errors",
+        "errors_desc": "Minimize manual typing mistakes significantly"
+    },
+    "footer": {
+        "rights": "All rights reserved.",
+        "brand_desc": "Empowering citizens with seamless access to government services. Secure, fast, and AI-powered documentation assistance.",
+        "quick_links": "Quick Links",
+        "popular_services": "Popular Services",
+        "stay_updated": "Stay Updated",
+        "subscribe_text": "Subscribe to get the latest updates on government schemes and services.",
+        "subscribe_btn": "Subscribe",
+        "enter_email": "Enter your email",
+        "aadhaar_update": "Aadhaar Update",
+        "pan_card": "PAN Card Application",
+        "voter_id": "Voter ID Registration",
+        "income_cert": "Income Certificate",
+        "voice_assist": "Voice Assistance",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+    },
+    "voice_form": {
+        "title": "Voice Based Form Filling",
+        "subtitle": "Record your voice to automatically fill the form. Speak clearly and provide all required information.",
+        "recording_completed": "Recording completed!",
+        "process_voice": "Process Voice",
+        "processing": "Processing...",
+        "record_again": "Record Again",
+        "try_again": "Try Again",
+        "success_title": "Form Auto-Filled Successfully!",
+        "new_recording": "New Recording",
+        "browse_services": "Browse Services",
+        "back_home": "Back to Home",
+        "back_upload": "Back to Document Upload"
+    },
+    "services": {
+        "title": "Seva Kendra Services",
+        "subtitle": "Select a service to apply for certificates, licenses, or welfare schemes",
+        "loading": "Loading services...",
+        "apply_now": "Apply Now",
+        "required_docs": "Required Documents:",
+        "required": "Required"
+    },
+    "service_data": {
+        "birth_cert": {
+            "name": "Birth Certificate"
+        },
+        "caste_cert": {
+            "name": "Caste Certificate"
+        },
+        "income_cert": {
+            "name": "Income Certificate"
+        },
+        "residence_cert": {
+            "name": "Residence Certificate"
+        },
+        "pm_svanidhi": {
+            "name": "PM Street Vendor’s AtmaNirbharNidhi (PM SVANidhi)"
+        },
+        "categories": {
+            "civil": "Civil Records",
+            "financial": "Financial Documents",
+            "residency": "Residency",
+            "welfare": "Welfare Schemes"
+        },
+        "docs": {
+            "identity_proof": "Identity Proof",
+            "birth_details": "Birth Details Form",
+            "caste_proof": "Caste Proof",
+            "address_proof": "Address Proof",
+            "self_decl": "Self Declaration",
+            "pan_card": "Pan Card",
+            "bank_stmt": "Bank Statement",
+            "tax_returns": "Tax Returns",
+            "aadhar_card": "Aadhaar Card",
+            "utility_bill": "Utility Bill",
+            "rental_agreement": "Rental Agreement",
+            "voter_id": "Voter ID Card"
+        }
+    },
+    "blog": {
+        "hero": {
+            "title": "Digital Seva Kendra Blog",
+            "subtitle": "Stay updated with the latest in government services, digital transformation, and citizen empowerment"
+        },
+        "featured": {
+            "title": "Featured Articles",
+            "badge": "Featured",
+            "read_more": "Read More →"
+        },
+        "filter": {
+            "title": "Browse by Category",
+            "all": "All Posts",
+            "documents": "Documents",
+            "technology": "Technology",
+            "government": "Government"
+        },
+        "newsletter": {
+            "title": "Stay Updated",
+            "text": "Get the latest updates on government services and digital initiatives delivered to your inbox.",
+            "placeholder": "Enter your email address",
+            "btn": "Subscribe"
+        },
+        "posts": [
+            {
+                "id": 1,
+                "title": "Complete Guide to Aadhar Card Services in 2024",
+                "excerpt": "Everything you need to know about Aadhar card applications, updates, and corrections through Digital Seva Kendra.",
+                "category": "documents",
+                "date": "December 28, 2024",
+                "readTime": "5 min read",
+                "featured": true
+            },
+            {
+                "id": 2,
+                "title": "How AI is Revolutionizing Government Form Filling",
+                "excerpt": "Discover how artificial intelligence is making government services more accessible and reducing paperwork errors.",
+                "category": "technology",
+                "date": "December 25, 2024",
+                "readTime": "7 min read",
+                "featured": true
+            },
+            {
+                "id": 3,
+                "title": "PAN Card Application: Step-by-Step Process",
+                "excerpt": "A comprehensive guide to applying for your PAN card online through authorized Digital Seva Kendra.",
+                "category": "documents",
+                "date": "December 22, 2024",
+                "readTime": "4 min read"
+            },
+            {
+                "id": 4,
+                "title": "Digital India Initiative: Empowering Citizens",
+                "excerpt": "Learn about the Digital India program and how it's transforming citizen services across the country.",
+                "category": "government",
+                "date": "December 20, 2024",
+                "readTime": "6 min read"
+            },
+            {
+                "id": 5,
+                "title": "Voice-Based Form Filling: The Future is Here",
+                "excerpt": "Experience the convenience of filling government forms using voice commands and AI technology.",
+                "category": "technology",
+                "date": "December 18, 2024",
+                "readTime": "5 min read"
+            },
+            {
+                "id": 6,
+                "title": "Income Certificate: Requirements and Process",
+                "excerpt": "Complete guide to obtaining income certificates for various government schemes and applications.",
+                "category": "documents",
+                "date": "December 15, 2024",
+                "readTime": "4 min read"
+            },
+            {
+                "id": 7,
+                "title": "Pradhan Mantri Awas Yojana: Eligibility Check",
+                "excerpt": "Find out if you are eligible for the PMAY housing scheme and how to apply online.",
+                "category": "government",
+                "date": "December 12, 2024",
+                "readTime": "6 min read"
+            },
+            {
+                "id": 8,
+                "title": "How to Link Mobile Number with Aadhaar",
+                "excerpt": "A step-by-step guide to linking your mobile number with your Aadhaar card for seamless authentication.",
+                "category": "documents",
+                "date": "December 10, 2024",
+                "readTime": "4 min read"
+            },
+            {
+                "id": 9,
+                "title": "Cyber Security Tips for Online Applications",
+                "excerpt": "Essential tips to keep your personal data safe while applying for government services online.",
+                "category": "technology",
+                "date": "December 08, 2024",
+                "readTime": "5 min read"
+            },
+            {
+                "id": 10,
+                "title": "Scholarship Schemes for Students 2025",
+                "excerpt": "Explore the various central and state government scholarship schemes available for students this year.",
+                "category": "government",
+                "date": "December 05, 2024",
+                "readTime": "7 min read"
+            },
+            {
+                "id": 11,
+                "title": "Understanding Birth Certificate Application",
+                "excerpt": "Learn about the documents required and the process to apply for a birth certificate in your state.",
+                "category": "documents",
+                "date": "December 03, 2024",
+                "readTime": "5 min read"
+            },
+            {
+                "id": 12,
+                "title": "The Rise of Digital Wallets in India",
+                "excerpt": "How UPI and digital wallets are transforming the way citizens pay for utility bills and services.",
+                "category": "technology",
+                "date": "December 01, 2024",
+                "readTime": "6 min read"
+            }
+        ]
+    },
+    "contact": {
+        "hero": {
+            "title": "Get in Touch",
+            "subtitle": "We're here to help you with all your government service needs. Reach out to us anytime!",
+            "bubble": "How can we help?"
+        },
+        "info": {
+            "title": "Contact Information",
+            "phone": "Phone Numbers",
+            "email": "Email Address",
+            "hours": "Office Hours",
+            "response": "Response Time",
+            "response_email": "Email: Within 2 hours",
+            "response_phone": "Phone: Immediate",
+            "mon_sat": "Mon - Sat: 9:00 AM - 6:00 PM",
+            "sun_closed": "Sunday: Closed"
+        },
+        "form": {
+            "title": "Send us a Message",
+            "subtitle": "Fill out the form below and we'll get back to you as soon as possible.",
+            "name": "Full Name",
+            "name_placeholder": "Enter your full name",
+            "email": "Email Address",
+            "email_placeholder": "Enter your email",
+            "phone": "Phone Number",
+            "phone_placeholder": "Enter your phone number",
+            "subject": "Subject",
+            "subject_placeholder": "Select a subject",
+            "subjects": {
+                "general": "General Inquiry",
+                "support": "Technical Support",
+                "services": "Service Information",
+                "complaint": "Complaint",
+                "feedback": "Feedback"
+            },
+            "message": "Message",
+            "message_placeholder": "Tell us how we can help you...",
+            "btn_send": "Send Message",
+            "btn_sending": "Sending...",
+            "success_title": "Message Sent Successfully!",
+            "success_text": "Thank you for reaching out to us. We will get back to you within 24 hours.",
+            "btn_another": "Send Another Message"
+        },
+        "locations": {
+            "title": "Our Office Locations",
+            "btn_directions": "Get Directions",
+            "items": [
+                {
+                    "city": "New Delhi",
+                    "address": "Connaught Place, Central Delhi",
+                    "landmark": "Near Metro Station",
+                    "services": "All Government Services"
+                },
+                {
+                    "city": "Mumbai",
+                    "address": "Bandra Kurla Complex, Mumbai",
+                    "landmark": "Near SEBI Building",
+                    "services": "Document Services"
+                },
+                {
+                    "city": "Bangalore",
+                    "address": "Electronic City, Bangalore",
+                    "landmark": "Tech Park Area",
+                    "services": "Digital Services"
+                }
+            ]
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "items": [
+                {
+                    "question": "What documents do I need to bring?",
+                    "answer": "Required documents vary by service. Generally, you'll need identity proof (Aadhar/PAN), address proof, and service-specific documents. Check our services page for detailed requirements."
+                },
+                {
+                    "question": "How long does processing take?",
+                    "answer": "Most services are processed within 1-3 working days. Urgent services can be expedited for an additional fee. You'll receive SMS/email updates on your application status."
+                },
+                {
+                    "question": "Are your services government authorized?",
+                    "answer": "Yes, we are an authorized Digital Seva Kendra partner under the Digital India initiative. All our services comply with government regulations and security standards."
+                },
+                {
+                    "question": "Can I track my application status?",
+                    "answer": "Absolutely! You'll receive a unique tracking ID after submission. Use this ID on our website or call our support team for real-time status updates."
+                }
+            ]
+        },
+        "emergency": {
+            "title": "Need Urgent Assistance?",
+            "text": "For urgent matters or emergency support, contact us immediately",
+            "call": "Call Now",
+            "email": "Email Support"
+        }
+    },
+    "about": {
+        "hero": {
+            "title": "About Digital Seva Kendra",
+            "subtitle": "Empowering citizens through digital transformation of government services"
+        },
+        "mission": {
+            "title": "Our Mission",
+            "text1": "To bridge the gap between citizens and government services through innovative technology solutions. We are committed to making essential government services accessible, efficient, and hassle-free for every Indian citizen.",
+            "text2": "Our AI-powered platform eliminates the complexity of government paperwork, reduces processing time, and ensures accuracy in document submission and form filling.",
+            "vision_title": "Vision 2030",
+            "vision_text": "Digital-first government services for all citizens"
+        },
+        "impact": {
+            "title": "Our Impact",
+            "items": [
+                {
+                    "number": "50,000+",
+                    "label": "Citizens Served"
+                },
+                {
+                    "number": "25+",
+                    "label": "Government Services"
+                },
+                {
+                    "number": "99.8%",
+                    "label": "Success Rate"
+                },
+                {
+                    "number": "24/7",
+                    "label": "Support Available"
+                }
+            ]
+        },
+        "values": {
+            "title": "Our Core Values",
+            "items": [
+                {
+                    "title": "Transparency",
+                    "description": "We believe in complete transparency in all our processes and pricing"
+                },
+                {
+                    "title": "Efficiency",
+                    "description": "Streamlining government services to save your time and effort"
+                },
+                {
+                    "title": "Trust",
+                    "description": "Building trust through secure, reliable, and accurate service delivery"
+                },
+                {
+                    "title": "Innovation",
+                    "description": "Leveraging cutting-edge technology to improve citizen experience"
+                }
+            ]
+        },
+        "team": {
+            "title": "Meet Our Team",
+            "subtitle": "Dedicated professionals working to transform citizen services",
+            "members": [
+                {
+                    "name": "Rajesh Kumar",
+                    "role": "Founder & CEO",
+                    "description": "15+ years in government digitization and citizen services"
+                },
+                {
+                    "name": "Priya Sharma",
+                    "role": "Head of Operations",
+                    "description": "Expert in streamlining government processes and customer service"
+                },
+                {
+                    "name": "Amit Singh",
+                    "role": "Technology Lead",
+                    "description": "AI/ML specialist focused on document processing and automation"
+                },
+                {
+                    "name": "Sunita Patel",
+                    "role": "Customer Relations",
+                    "description": "Dedicated to ensuring seamless citizen experience"
+                }
+            ]
+        },
+        "partnership": {
+            "title": "Government Authorized Partner",
+            "text": "Digital Seva Kendra is an authorized partner under the Digital India initiative, ensuring compliance with all government regulations and security standards.",
+            "authorized": "Government Authorized",
+            "sub_text1": "Power To Empower",
+            "sub_text2": "मेरी सरकार"
+        },
+        "cta": {
+            "title": "Ready to Experience Digital Government Services?",
+            "text": "Join thousands of satisfied citizens who have simplified their government paperwork",
+            "btn_primary": "Get Started Today",
+            "btn_secondary": "Contact Us"
+        }
+    }
+}

@@ -1,0 +1,88 @@
+{
+  "service_001": {
+    "service_name": "service_data.birth_cert.name",
+    "category": "service_data.categories.civil",
+    "required_documents": [
+      {
+        "name": "service_data.docs.identity_proof",
+        "mandatory": true
+      },
+      {
+        "name": "service_data.docs.birth_details",
+        "mandatory": true
+      }
+    ]
+  },
+  "service_002": {
+    "service_name": "service_data.caste_cert.name",
+    "category": "service_data.categories.civil",
+    "required_documents": [
+      {
+        "name": "service_data.docs.identity_proof",
+        "mandatory": true
+      },
+      {
+        "name": "service_data.docs.caste_proof",
+        "mandatory": true
+      },
+      {
+        "name": "service_data.docs.address_proof",
+        "mandatory": true
+      },
+      {
+        "name": "service_data.docs.self_decl",
+        "mandatory": false
+      }
+    ]
+  },
+  "service_003": {
+    "service_name": "service_data.income_cert.name",
+    "category": "service_data.categories.financial",
+    "required_documents": [
+      {
+        "name": "service_data.docs.pan_card",
+        "mandatory": true
+      },
+      {
+        "name": "service_data.docs.bank_stmt",
+        "mandatory": true
+      },
+      {
+        "name": "service_data.docs.tax_returns",
+        "mandatory": false
+      }
+    ]
+  },
+  "service_004": {
+    "service_name": "service_data.residence_cert.name",
+    "category": "service_data.categories.residency",
+    "required_documents": [
+      {
+        "name": "service_data.docs.aadhar_card",
+        "mandatory": true
+      },
+      {
+        "name": "service_data.docs.utility_bill",
+        "mandatory": true
+      },
+      {
+        "name": "service_data.docs.rental_agreement",
+        "mandatory": false
+      }
+    ]
+  },
+  "service_005": {
+    "service_name": "service_data.pm_svanidhi.name",
+    "category": "service_data.categories.welfare",
+    "required_documents": [
+      {
+        "name": "service_data.docs.aadhar_card",
+        "mandatory": true
+      },
+      {
+        "name": "service_data.docs.voter_id",
+        "mandatory": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+.mic-recorder-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.record-button {
+  background: #f3f4f6;
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  min-width: 200px;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.record-button:hover:not(:disabled) {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.record-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.record-button.recording {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #dc2626;
+  animation: pulse-border 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-border {
+  0%, 100% {
+    border-color: #fca5a5;
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4);
+  }
+  50% {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 8px rgba(220, 38, 38, 0);
+  }
+}
+
+.button-icon {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.button-text {
+  font-weight: 600;
+}
+
+.recording-indicator {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  background: #dc2626;
+  border-radius: 50%;
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.recording-status {
+  color: #dc2626;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.recorder-error {
+  color: #dc2626;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  background: #fef2f2;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+  width: 100%;
+}
+
+.record-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+

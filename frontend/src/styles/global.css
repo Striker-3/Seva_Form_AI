@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+}
+
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #1e88e5;
+  --success: #28a745;
+}
+
+html, body, #root {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+button {
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+button:active { transform: translateY(1px); }
+
+/* Global Animation Classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.slide-down {
+  animation: slideDown 0.8s ease-out;
+}
+
+.slide-left {
+  animation: slideLeft 0.8s ease-out;
+}
+
+.slide-right {
+  animation: slideRight 0.8s ease-out;
+}
+
+.scale-in {
+  animation: scaleIn 0.6s ease-out;
+}
+
+.bounce-in {
+  animation: bounceIn 0.8s ease-out;
+}
+
+.rotate-in {
+  animation: rotateIn 0.8s ease-out;
+}
+
+/* Ensure buttons and links maintain proper text visibility */
+button:not(.btn), a:not(.btn) {
+  -webkit-text-fill-color: unset !important;
+  background-clip: unset !important;
+}
+
+/* Fix any gradient text issues on non-button elements */
+a:not(.btn) *,
+h1:not(.btn) *,
+h2:not(.btn) *,
+h3:not(.btn) *,
+.card-title *,
+.section-title * {
+  -webkit-text-fill-color: inherit !important;
+  background-clip: unset !important;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+/* Hover Animations */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+}
+
+/* Stagger Animation Delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Page Transition */
+.page-transition {
+  animation: pageTransition 0.5s ease-out;
+}
+
+@keyframes pageTransition {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* subtle page fade */
+body { animation: fadeIn 220ms ease both; }
+@keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px;
+  display: grid;
+  gap: 20px;
+}
+
+.description-box {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  margin: 30px 0;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.description-box p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.description-box strong {
+  color: #1e88e5;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.features-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.feature-card h4 {
+  margin: 12px 0 8px 0;
+  color: #2c3e50;
+  font-size: 18px;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .description-box {
+    padding: 20px;
+  }
+}

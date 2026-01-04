@@ -1,0 +1,29 @@
+{
+  "service": "Income Certificate",
+  "fields": {
+    "name": "",
+    "dob": "",
+    "gender": "",
+    "father_name": "",
+    "mother_name": "",
+    "place_of_birth": "",
+    "registration_number": "",
+    "date_of_registration": "",
+    "address": "",
+    "permanent_address": "",
+    "pan": "",
+    "aadhaar": "",
+    "mobile": "",
+    "email": "",
+    "caste": "",
+    "marital_status": "",
+    "village": "",
+    "taluka": "",
+    "district": "",
+    "state": "",
+    "pincode": "",
+    "caste_name": "",
+    "sub_caste": "",
+    "father_caste": ""
+  }
+}
