@@ -1,3 +1,84 @@
+🏛️ Seva Form AI
+AI-Powered Government Form Auto-Filling System
+
+Seva Form AI is an end-to-end AI-driven platform that helps citizens automatically fill government service forms at Seva Kendras using documents (Aadhaar, PAN, Voter ID) and voice input, reducing manual effort, errors, and processing time.
+
+🚀 Problem Statement
+
+Citizens often need to fill multiple government service forms (Birth Certificate, Caste Certificate, PM SVANidhi, etc.).
+These forms are:
+
+Time-consuming
+
+Error-prone
+
+Difficult for rural users and senior citizens
+
+Seva Form AI solves this by:
+
+Extracting data from uploaded documents
+
+Supporting voice-based inputs
+
+Auto-filling government-style forms
+
+Generating downloadable PDF applications
+
+✨ Key Features
+👤 Citizen Side
+
+📄 Document Upload (Aadhaar / PAN / Voter ID)
+
+🧠 OCR + AI Entity Extraction
+
+🎙️ Voice-Based Form Filling (Hindi / Marathi / English)
+
+✍️ Editable Auto-Filled Form
+
+📥 Government-Style PDF Download
+
+📱 Mobile Responsive UI
+
+🏛️ Government Style UI
+
+Official Government of India header & layout
+
+Print-ready A4 PDF output
+
+Declaration & Office Use sections
+
+🛠️ Admin Side
+
+📊 Admin dashboard
+
+📁 View submitted applications
+
+🔍 Track document processing
+
+🧱 Tech Stack
+Frontend
+
+⚛️ React + Vite
+
+🎨 Custom CSS (Gov-style layout)
+
+🧾 html2canvas + jsPDF (PDF generation)
+
+🎙️ Web Audio API
+
+Backend
+
+🐍 Python + FastAPI
+
+🎧 Whisper / Speech-to-Text
+
+📷 Tesseract OCR
+
+🧠 NLP Entity Extraction
+
+🌐 Uvicorn server
+
+
 # Seva Form AI - Project Setup Guide
 
 This project consists of a React frontend and a FastAPI (Python) backend. Follow these instructions to set up and run the project on a new machine.
