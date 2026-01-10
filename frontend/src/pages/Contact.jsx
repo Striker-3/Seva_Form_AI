@@ -232,25 +232,17 @@ export default function Contact() {
               )}
             </div>
 
-            <div className="map-placeholder">
-              <div className="map-content">
-                <h3>{t('contact.locations.title')}</h3>
-                <p>{t('contact.hero.subtitle')}</p> {/* Reusing subtitle or similar text? "Visit Our Offices" was hardcoded. Let's reuse title or add key. "We have multiple locations..." was also hardcoded.*/}
-                {/* I missed adding "Visit Our Offices" and map text to translation file. 
-                    I'll use "Our Office Locations" title again or just keep hardcoded English if unavoidable, 
-                    BUT I should have added them. 
-                    Let's check translation file. 
-                    "locations": { "title": "Our Office Locations" ... }
-                    "map-content" had "Visit Our Offices" and "We have multiple locations...".
-                    I will replace with generic text from translation if available or keep simple.
-                    Actually I will use `t('contact.locations.title')` for header.
-                */}
-                <h3>{t('contact.locations.title')}</h3>
-                <div className="map-visual">
-                  <div className="map-pin">📍</div>
-                  <div className="map-text">Interactive Map Coming Soon</div>
-                </div>
-              </div>
+            {/* Map Section */}
+            <div className="map-container" style={{ width: "100%", height: "400px", borderRadius: "16px", overflow: "hidden", marginTop: "20px", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)" }}>
+              <iframe
+                title="MRSAC Nagpur Map"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                src="https://maps.google.com/maps?q=Maharashtra%20Remote%20Sensing%20Application%20Centre%20MRSAC%20Nagpur&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
             </div>
           </div>
         </section>

@@ -4,6 +4,7 @@ import pytesseract
 import numpy as np
 from PIL import Image
 import os
+import fitz  # PyMuPDF
 
 # If Windows + Tesseract path issue, uncomment and set path
 # pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
@@ -12,8 +13,27 @@ import os
 def preprocess_image(image_path: str):
     """
     Image preprocessing for Indian Govt IDs
+    Supports PDF by converting first page to image.
     """
-    img = cv2.imread(image_path)
+    if image_path.lower().endswith('.pdf'):
+        try:
+            doc = fitz.open(image_path)
+            page = doc.load_page(0)  # load first page
+            pix = page.get_pixmap()
+            
+            # Convert to numpy array (RGB)
+            img = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.h, pix.w, pix.n)
+            
+            # Convert to BGR if necessary (OpenCV uses BGR)
+            if pix.n == 3:  # RGB
+                img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+            elif pix.n == 4:  # RGBA
+                img = cv2.cvtColor(img, cv2.COLOR_RGBA2BGR)
+                
+        except Exception as e:
+            raise ValueError(f"Failed to process PDF: {e}")
+    else:
+        img = cv2.imread(image_path)
 
     if img is None:
         raise ValueError("Image not readable")

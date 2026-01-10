@@ -15,6 +15,7 @@ export default function VoiceForm() {
 
   const [audioBlob, setAudioBlob] = useState(null);
   const [result, setResult] = useState(location.state?.existingForm ? { filled_form: location.state.existingForm } : null);
+  const [recognizedText, setRecognizedText] = useState(null);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState(null);
 
@@ -53,6 +54,7 @@ export default function VoiceForm() {
 
       // Update result with merged form
       setResult({ ...res, filled_form: mergedForm });
+      setRecognizedText(res.recognized_text); // Store transcript
     } catch (err) {
       setError(err.message || "Failed to process voice. Please try again.");
       console.error("Voice processing error:", err);
@@ -64,6 +66,7 @@ export default function VoiceForm() {
   const resetRecording = () => {
     setAudioBlob(null);
     setResult(null);
+    setRecognizedText(null);
     setError(null);
   };
 
@@ -130,6 +133,14 @@ export default function VoiceForm() {
                   🎤 {t('voice_form.new_recording')}
                 </button>
               </div>
+
+              {recognizedText && (
+                <div className="transcript-box">
+                  <h3>🗣️ AI Heard:</h3>
+                  <p>"{recognizedText}"</p>
+                </div>
+              )}
+
               <EditableForm data={result.filled_form?.fields || result.filled_form} />
             </div>
           )}

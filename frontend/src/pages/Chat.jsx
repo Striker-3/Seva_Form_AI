@@ -9,7 +9,7 @@ export default function Chat() {
     ]);
     const [inputText, setInputText] = useState("");
 
-    const handleSend = (e) => {
+    const handleSend = async (e) => {
         e.preventDefault();
         if (!inputText.trim()) return;
 
@@ -17,13 +17,29 @@ export default function Chat() {
         setMessages((prev) => [...prev, newMsg]);
         setInputText("");
 
-        // Mock bot response
-        setTimeout(() => {
+        // Call Backend API
+        try {
+            const res = await fetch("http://localhost:8000/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: inputText }),
+            });
+
+            if (!res.ok) throw new Error("Failed to fetch response");
+
+            const data = await res.json();
+
             setMessages((prev) => [
                 ...prev,
-                { id: Date.now() + 1, text: "Thank you for your message. Our support team will respond shortly.", sender: "bot" }
+                { id: Date.now() + 1, text: data.response, sender: "bot" }
             ]);
-        }, 1000);
+        } catch (error) {
+            console.error("Chat Error:", error);
+            setMessages((prev) => [
+                ...prev,
+                { id: Date.now() + 1, text: "Sorry, I'm having trouble connecting to the server.", sender: "bot" }
+            ]);
+        }
     };
 
     return (
@@ -58,7 +74,8 @@ export default function Chat() {
                                     color: msg.sender === "user" ? "white" : "#1f2937",
                                     borderBottomRightRadius: msg.sender === "user" ? "4px" : "12px",
                                     borderBottomLeftRadius: msg.sender === "bot" ? "4px" : "12px",
-                                    boxShadow: "0 1px 2px rgba(0,0,0,0.05)"
+                                    boxShadow: "0 1px 2px rgba(0,0,0,0.05)",
+                                    whiteSpace: "pre-wrap"
                                 }}
                             >
                                 {msg.text}

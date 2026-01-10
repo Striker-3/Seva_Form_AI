@@ -62,11 +62,16 @@
 /* =====================================================
    FORM BOX
 ===================================================== */
+/* =====================================================
+   FORM BOX
+===================================================== */
 .form-box {
-  background: white;
-  border-radius: 16px;
-  padding: 35px;
-  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 4px;
+  padding: 40px;
+  border: 2px solid #000;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* ❌ REMOVE hover transforms (canvas killer) */
@@ -78,12 +83,15 @@
    TITLES
 ===================================================== */
 .form-title {
+  font-family: "Times New Roman", Times, serif;
   font-size: 22px;
   font-weight: 700;
-  color: #1f2937;
+  color: #000;
   margin-bottom: 30px;
   padding-bottom: 15px;
-  border-bottom: 2px solid #f3f4f6;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* =====================================================
@@ -98,7 +106,7 @@
 .form-field-group {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   page-break-inside: avoid;
 }
 
@@ -106,19 +114,17 @@
    LABELS
 ===================================================== */
 .form-label {
-  font-size: 13px;
-  font-weight: 600;
-  color: #374151;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .form-label::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(to right, #e5e7eb, transparent);
+  content: none;
 }
 
 /* =====================================================
@@ -128,13 +134,18 @@
 .form-textarea,
 .form-select {
   width: 100%;
-  padding: 12px 14px;
-  font-size: 14px;
-  border: 2px solid #e5e7eb;
-  border-radius: 10px;
-  background: white;
-  color: #111827;
+  padding: 8px 0;
+  font-family: "Courier New", Courier, monospace;
+  /* Typewriter look for input text */
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-bottom: 2px solid #000;
+  border-radius: 0;
+  background: transparent;
+  color: #000;
   outline: none;
+  transition: border-color 0.2s;
 }
 
 /* ❌ REMOVE hover lift */

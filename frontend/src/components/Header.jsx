@@ -39,6 +39,7 @@ export default function Header() {
           <Link to="/about" className="nav-link">{t('nav.about')}</Link>
           <Link to="/blog" className="nav-link">{t('nav.blog')}</Link>
           <Link to="/contact" className="nav-link">{t('nav.contact')}</Link>
+          <Link to="/complaint-map" className="nav-link">Nearby (GIS)</Link>
         </nav>
 
         {/* Actions */}

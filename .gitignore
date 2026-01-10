@@ -26,6 +26,12 @@ yarn-debug.log*
 yarn-error.log*
 *.log
 
+# Generated files
+*.pdf
+test_output*.txt
+uploads/
+app/data/generated/
+
 # System
 .DS_Store
 Thumbs.db

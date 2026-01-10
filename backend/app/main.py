@@ -2,8 +2,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.routes import services, documents
-from app.routes import voice   # 🔥 ADD THIS
-from app.routes import submit  # Form submission
+from app.routes import voice
+from app.routes import submit
+from app.routes import chat
+from app.routes import gis    # 🔥 ADD THIS
 
 app = FastAPI(
     title="Seva Form AI",
@@ -20,8 +22,10 @@ app.add_middleware(
 
 app.include_router(services.router)
 app.include_router(documents.router)
-app.include_router(voice.router)   # 🔥 REGISTER VOICE ROUTER
-app.include_router(submit.router)  # REGISTER SUBMIT ROUTER
+app.include_router(voice.router)
+app.include_router(submit.router)
+app.include_router(chat.router)
+app.include_router(gis.router) # 🔥 REGISTER GIS ROUTER
 
 @app.get("/")
 def root():

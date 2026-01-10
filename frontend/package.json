@@ -14,9 +14,11 @@
     "html2pdf.js": "^0.12.1",
     "i18next": "^25.7.3",
     "jspdf": "^4.0.0",
+    "leaflet": "^1.9.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-i18next": "^16.5.1",
+    "react-leaflet": "^5.0.0",
     "react-router-dom": "^7.11.0"
   },
   "devDependencies": {

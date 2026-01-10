@@ -107,12 +107,12 @@ def extract_entities(text: str):
     # =========================
     # NAME EXTRACTION
     # =========================
-    # 1. Look for "Name is", "Name" labels
-    name_label_match = re.search(r"(?:Name|Name is|I am|My name is)[\s:]+([A-Z][a-z]+(?:\s[A-Z][a-z]+)+)", text_clean, re.IGNORECASE)
+    # 1. Look for "Name is", "Name" labels. Support lowercase names.
+    # Regex structure: (Label) (optional 'is') (Name)
+    name_label_match = re.search(r"(?:Name|I am|My name)(?:\s+is)?[\s:]+([A-Za-z]+(?:\s[A-Za-z]+)+)", text_clean, re.IGNORECASE)
     if name_label_match:
-        # Avoid capturing "My Name Is" as the name itself by taking the group
         candidate = name_label_match.group(1).strip()
-        # Filter out common false positives if "I am" captures "I am A Student"
+        # Filter out common false positives
         if "student" not in candidate.lower() and "here" not in candidate.lower():
              entities["name"] = candidate
     
@@ -143,7 +143,8 @@ def extract_entities(text: str):
         entities["address"] = clean_space(bc_addr_match.group(1))
 
     # 2. Conversational "Address is", "Live at"
-    conv_addr_match = re.search(r"(?:Address is|Live at|Residing at)[\s:]+(.+?)(?=\.|My|Phone|Email|Date|$)", text_clean, re.IGNORECASE)
+    # Added (?:\s+is)? to handle "Address is..."
+    conv_addr_match = re.search(r"(?:Address|Live at|Residing at)(?:\s+is)?[\s:]+(.+?)(?=\.|My|Phone|Email|Date|$)", text_clean, re.IGNORECASE)
     if conv_addr_match:
          entities["address"] = clean_space(conv_addr_match.group(1))
     
@@ -184,13 +185,13 @@ def extract_entities(text: str):
 
     # Father's Name
     # Pattern: "Name of Father", "Father's Name"
-    father_match = re.search(r"(?:Name of Father|Father(?:'s)? Name)[\s:]+([A-Za-z \t\.]+)(?=\n|Name|Address|$)", text_clean, re.IGNORECASE)
+    father_match = re.search(r"(?:Name of Father|Father(?:'s)? Name)(?:\s+is)?[\s:]+([A-Za-z \t\.]+)(?=\n|Name|Address|$)", text_clean, re.IGNORECASE)
     if father_match:
          entities["father_name"] = clean_space(father_match.group(1))
 
     # Mother's Name
     # Pattern: "Name of Mother", "Mother's Name"
-    mother_match = re.search(r"(?:Name of Mother|Mother(?:'s)? Name)[\s:]+([A-Za-z \t\.]+)(?=\n|Name|Address|$)", text_clean, re.IGNORECASE)
+    mother_match = re.search(r"(?:Name of Mother|Mother(?:'s)? Name)(?:\s+is)?[\s:]+([A-Za-z \t\.]+)(?=\n|Name|Address|$)", text_clean, re.IGNORECASE)
     if mother_match:
          entities["mother_name"] = clean_space(mother_match.group(1))
 

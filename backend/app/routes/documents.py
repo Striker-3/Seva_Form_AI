@@ -49,6 +49,8 @@ async def generate_form_from_documents(request: DocumentEntitiesRequest):
     """
     Combine entities from multiple uploaded documents and generate filled form
     """
+    print(f"Received generate-form request for service_id: {request.service_id}")
+    print(f"Entities list (count: {len(request.entities_list)})")
     try:
         # Combine all entities from different documents
         combined_entities = {}

@@ -100,21 +100,35 @@ export default function DocumentUpload() {
 
   const autoGenerateForm = async () => {
     setProcessingForm(true);
+    console.log("Attempting to auto-generate form...");
+    console.log("Current documentResults:", documentResults);
     try {
       // Collect all AI results from uploaded documents
       const entitiesList = Object.values(documentResults).filter(
         (result) => result && result.status === "success"
       );
 
+      console.log("Filtered entitiesList:", entitiesList);
+
       if (entitiesList.length > 0) {
+        console.log("Calling generateFormFromDocuments with:", serviceId, entitiesList);
         const formResult = await generateFormFromDocuments(serviceId, entitiesList);
+        console.log("generateFormFromDocuments result:", formResult);
+
         if (formResult.status === "success") {
           setFilledForm(formResult.filled_form);
           setShowForm(true);
+        } else {
+          console.error("Form generation returned non-success status:", formResult);
+          alert("Failed to generate form. See console for details.");
         }
+      } else {
+        console.warn("No successful document results found to generate form from.");
+        alert("No valid document data found. Please try re-uploading documents.");
       }
     } catch (error) {
       console.error("Failed to generate form:", error);
+      alert("An error occurred while generating the form.");
     } finally {
       setProcessingForm(false);
     }

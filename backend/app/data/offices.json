@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Seva Kendra - Nagpur Central",
+        "type": "Seva Kendra",
+        "address": "Civil Lines, Nagpur, Maharashtra",
+        "lat": 21.1458,
+        "lng": 79.0882,
+        "contact": "0712-2567890"
+    },
+    {
+        "id": 2,
+        "name": "District Collector Office",
+        "type": "Government Office",
+        "address": "Civil Lines, Nagpur",
+        "lat": 21.1481,
+        "lng": 79.0849,
+        "contact": "0712-2565656"
+    },
+    {
+        "id": 3,
+        "name": "Nagpur Municipal Corporation",
+        "type": "Municipal",
+        "address": "Mahal, Nagpur",
+        "lat": 21.1425,
+        "lng": 79.1120,
+        "contact": "0712-2722222"
+    },
+    {
+        "id": 4,
+        "name": "Tehsil Office - South",
+        "type": "Tehsil",
+        "address": "Manewada Road, Nagpur",
+        "lat": 21.1110,
+        "lng": 79.0980,
+        "contact": "0712-2755555"
+    },
+    {
+        "id": 5,
+        "name": "Seva Kendra - Dharampeth",
+        "type": "Seva Kendra",
+        "address": "Dharampeth, Nagpur",
+        "lat": 21.1350,
+        "lng": 79.0700,
+        "contact": "0712-2544444"
+    }
+]
